@@ -1,0 +1,55 @@
+/* styles.css */
+
+.logos {
+    overflow: hidden;
+    padding: .5rem 0;
+    background-color: white;
+
+    white-space: nowrap;
+    position: relative; /* Added position relative for pseudo-elements */
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logo-slide {
+    display: inline-block;
+    animation: 25s slide infinite linear; /* Added 'infinite' for continuous animation */
+  }
+  
+  .logo-slide img {
+    height: 3rem;
+    margin: 0 1rem;
+  }
+  
+  .logos:hover .logo-slide {
+    animation-play-state: paused;
+  }
+  
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    width: 2rem;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:after {
+    right: 0;
+    width: 250px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  

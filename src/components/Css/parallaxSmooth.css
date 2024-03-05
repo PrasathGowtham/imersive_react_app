@@ -1,0 +1,15 @@
+.parallax-div {
+    height: 100vh;
+    /* Ensure the div fills the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7em;
+    transition: transform 0.1s ease;
+    /* Smooth transition for the transform property */
+}
+
+.spacer {
+    height: 200vh;
+    /* Additional content to create space for scrolling */
+}

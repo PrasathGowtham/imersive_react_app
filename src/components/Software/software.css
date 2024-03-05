@@ -1,0 +1,10 @@
+.softwareContainer {
+  height: 100vh;
+  padding: 0 10rem 0 10rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
