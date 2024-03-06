@@ -5,18 +5,23 @@ import HomeScreen from "./components/Home/home";
 import ProjectList from "./components/ProjectsList/projectList";
 import SoftwareContent from "./components/Software/software";
 import WhatIsImersive from "./components/whatIsImersive/imersive";
+import AboutUs from "./components/Aboutus/aboutUs";
+import TextTransitions from "./components/Software/TextTransitions";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
       <HomeScreen />
-      <WhatIsImersive/>
-      <ProjectList />
+      <WhatIsImersive />
+
       <SoftwareContent />
+      <TextTransitions/>
+      <ProjectList />
+      <AboutUs />
 
       {/* final out put  */}
-      <ParallaxSmooth />
+      {/* <ParallaxSmooth /> */}
     </div>
   );
 }
