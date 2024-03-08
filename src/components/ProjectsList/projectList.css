@@ -20,7 +20,7 @@
   justify-content: center;
   height: 3rem;
   line-height: 1.8rem;
-  max-width: 20%;
+
   padding: 0.9rem 1.4rem;
   text-decoration: none;
   transition: all 0.2s;
@@ -106,4 +106,16 @@
 .button:hover span:after {
   opacity: 0;
   right: -10px; /* Move arrow to the right on hover */
+}
+
+@media screen and (max-width: 600px) {
+  .projectListContainer {
+    padding: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: 130rem;
+    padding:2rem
+  }
+
+
 }

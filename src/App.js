@@ -7,6 +7,7 @@ import SoftwareContent from "./components/Software/software";
 import WhatIsImersive from "./components/whatIsImersive/imersive";
 import AboutUs from "./components/Aboutus/aboutUs";
 import TextTransitions from "./components/Software/TextTransitions";
+import FooterPage from "./components/Footer/footer";
 
 function App() {
   return (
@@ -14,11 +15,11 @@ function App() {
       <NavBar />
       <HomeScreen />
       <WhatIsImersive />
-
       <SoftwareContent />
       <TextTransitions/>
       <ProjectList />
       <AboutUs />
+      <FooterPage/>
 
       {/* final out put  */}
       {/* <ParallaxSmooth /> */}

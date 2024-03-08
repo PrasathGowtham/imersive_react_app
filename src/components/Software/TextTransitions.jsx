@@ -2,7 +2,7 @@ import React from "react";
 import carBackGround from "../../assets/lambo.jpg";
 import { Box, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-
+import "./software.css"
 const BlurredContainer = styled("div")({
   backdropFilter: "blur(5px)",
   padding: "40px",
@@ -64,7 +64,7 @@ function TextTransitions() {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     width: "100%",
-    height: "100vh",
+    height: "100%",
     zIndex: -1,
     marginTop:"4rem"
   };
@@ -78,6 +78,7 @@ function TextTransitions() {
   };
 
   return (
+    <div className="solution">
     <Box style={divStyle}>
       <Grid
         container
@@ -152,6 +153,7 @@ function TextTransitions() {
         </Grid>
       </Grid>
     </Box>
+    </div>
   );
 }
 

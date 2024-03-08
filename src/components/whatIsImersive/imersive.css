@@ -1,6 +1,15 @@
 .immersiveContainer {
-    height: 120vh;
-    padding: 2rem 5rem;
-    background-color: black;
-    margin-top: 5rem;
+  height: 120vh;
+  padding: 2rem 5rem;
+  background-color: black;
+  margin-top: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .immersiveContainer {
+    padding: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: 30rem;
+  }
 }

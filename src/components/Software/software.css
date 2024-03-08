@@ -10,3 +10,22 @@ margin-top: 9rem;
   justify-content: center;
   margin-top: 2rem;
 }
+
+
+@media screen and (max-width: 600px) {
+  .softwareContainer {
+    padding: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: 60rem;
+    padding:2rem
+  }
+
+  .solution{
+    padding: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: 100rem;
+    padding:2rem
+  }
+}

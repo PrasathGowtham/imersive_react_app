@@ -26,7 +26,7 @@ export default function WhatIsImersive() {
           <img src={imersive} alt="imersive" style={styles.immersiveImage} />
         </Grid>
         <Grid item xs={12}>
-          <Typography sx={{ textAlign: "center", padding: "0 5rem" }}>
+          <Typography sx={{ textAlign: "center", padding: "0 5rem",color:"#fff" }}>
             Imersive.io is a B2B company pioneering experiential e-commerce
             solutions for brands and retailers, empowering them to craft
             captivating 3D commerce experiences seamlessly integrated into
