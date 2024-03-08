@@ -1,8 +1,13 @@
+/* Responsive styles for AboutUs */
 .aboutUsContainer {
-    height: 350vh;
-    /* padding: 2rem 5rem; */
-    background-color:#fff;
-    /* margin-top: 5rem; */
+  height: 350vh;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 960px) {
+  .aboutUsContainer {
+    padding: 0 1rem; /* Adjust the padding for smaller screens */
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -10,6 +15,19 @@
     padding: 0;
     flex-direction: column;
     gap: 5rem;
-    height: 220rem;
+    height: auto;
+  }
+
+  .aboutUsContainer .brandsveImage {
+    width: 100%; /* Adjust the width for smaller screens */
+    height: auto; /* Adjust the height for smaller screens */
+  }
+
+  .aboutUsContainer .MuiTypography-root {
+    padding: 0 1rem; /* Adjust the padding for Typography components */
+  }
+
+  .aboutUsContainer .MuiButton-root {
+    width: 100%; /* Adjust the width for the button on smaller screens */
   }
 }

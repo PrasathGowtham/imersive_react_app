@@ -108,14 +108,28 @@
   right: -10px; /* Move arrow to the right on hover */
 }
 
-@media screen and (max-width: 600px) {
+@media (min-width: 768px) {
   .projectListContainer {
-    padding: 0;
-    flex-direction: column;
-    gap: 5rem;
-    height: 130rem;
-    padding:2rem
+    padding: 2rem 5rem;
+    flex-direction: row;
+    gap: 2rem;
+    height: 150vh;
   }
 
+  .button-46 {
+    font-size: 20px;
+    min-width: 200px;
+    padding: 14px 16px;
+  }
+}
 
+@media screen and (max-width: 600px) {
+  .projectListContainer {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .button-46 {
+    font-size: 1rem;
+  }
 }

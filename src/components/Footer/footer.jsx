@@ -9,6 +9,7 @@ import twitter from "../../assets/footer/Social Icons.svg";
 import insta from "../../assets/footer/Social Icons (1).svg";
 import linkedin from "../../assets/footer/Social Icons (2).svg";
 import delta from "../../assets/footer/Social Icons (3).svg";
+
 export default function FooterPage() {
   const footerStyles = {
     image: {
@@ -67,6 +68,7 @@ export default function FooterPage() {
             borderBottomRightRadius: "6rem",
             borderBottomLeftRadius: { xs: "6rem", md: 0 },
             bgcolor: "black",
+        
           }}
         >
           <Grid
@@ -74,7 +76,6 @@ export default function FooterPage() {
             sx={footerStyles.inputField}
             justifyContent="space-between"
             alignItems="center"
-         
           >
             <Grid xs={12} md={5} className="c-right ">
               <input
@@ -159,15 +160,15 @@ export default function FooterPage() {
             bgcolor: "black",
           }}
         >
-          <Card sx={{ height: { xs: "22rem", md: "5rem" } }}>
-            <Grid container>
+          <Box sx={{ height: { xs: "22rem", md: "5rem" }, bgcolor: "#fff" ,display:"flex",alignContent:"center"}}>
+            <Grid container alignItems="center">
               <Grid xs={12} md={2} order={{ xs: 1, md: 0 }}>
                 <Box
                   sx={{
                     display: "flex",
                     width: "100%",
                     justifyContent: "space-around",
-                    marginTop: "2rem",
+                  
                   }}
                 >
                   <Box>
@@ -190,6 +191,7 @@ export default function FooterPage() {
                     display: "flex",
                     width: "100%",
                     justifyContent: "flex-end",
+                   
                     gap: 4,
                     fontWeight: "bold",
                     flexDirection: { xs: "column", md: "row" },
@@ -203,7 +205,7 @@ export default function FooterPage() {
                 </Box>
               </Grid>
             </Grid>
-          </Card>
+          </Box>
         </Grid>
       </Grid>
     </div>

@@ -1,90 +1,98 @@
 .homeContainer {
-    height: 80vh;
-    /* width: 100vw; */
-    margin: 6rem 1rem 0rem 1rem;
-    background-image: url("../../assets/lambo.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 1rem;
+  height: 80vh;
+  margin: 6rem 1rem 0rem 1rem;
+  background-image: url("../../assets/lambo.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 1rem;
 }
 
 .buttonContainer {
-    position: absolute;
-    width: 15rem;
-    bottom:0; /* Adjust the distance from the bottom as needed */
-    background-color: #000;
-    border-radius: 2rem 2rem 0 0;
+  position: absolute;
+  width: 15rem;
+  bottom: 0;
+  background-color: #000;
+  border-radius: 2rem 2rem 0 0;
 }
 
 .buttonContainerSpan {
-    content: '';
-    position: absolute;
-    bottom:0; 
-    left:20;
-    background-color: green;
-    width:2rem;
-    height:2rem;
-    border-radius: 2rem 2rem 0 0;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20px; /* Added "px" for left property */
+  background-color: green;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem 2rem 0 0;
 }
 
+.buttonHome {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
 
+.buttonHome a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #8800b7;
+  display: block;
+  position: relative;
+  padding: 10px 30px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  -webkit-box-shadow: inset 0 1px 0 #8800b7, 0 10px 0 #4e0268;
+  -moz-box-shadow: inset 0 1px 0 #8800b7, 0 10px 0 #4e0268;
+  box-shadow: inset 0 1px 0 #8800b7, 0 10px 0 #4e0268;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
 
+.buttonHome a:active {
+  top: 10px;
+  background-color: #8800b7;
+  -webkit-box-shadow: inset 0 1px 0 #8800b7, inset 0 -3px 0 #4e0268;
+  -moz-box-shadow: inset 0 1px 0 #8800b7, inset 0 -3pxpx 0 #4e0268;
+  box-shadow: inset 0 1px 0 #8800b7, inset 0 -3px 0 #4e0268;
+}
 
-.buttonHome{
-    position:relative;
-    display:inline-block;
-    margin:10px;
+.buttonHome:after {
+  content: "";
+  height: 90%;
+  width: 100%;
+  padding: 4px;
+  position: absolute;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #2b1800;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .homeContainer {
+      height: 60vh;
   }
-  
-  .buttonHome a{
-    color:white;
-    font-family:Helvetica, sans-serif;
-    font-weight:bold;
-    font-size:1.2rem;
-    text-align: center;
-    text-decoration:none;
-    background-color:#8800B7;
-    display:block;
-    position:relative;
-    padding:10px 30px;
-    
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    text-shadow: 0px 1px 0px #000;
-    filter: dropshadow(color=#000, offx=0px, offy=1px);
-    
-    -webkit-box-shadow:inset 0 1px 0 #8800B7, 0 10px 0 #4E0268;
-    -moz-box-shadow:inset 0 1px 0 #8800B7, 0 10px 0 #4E0268;
-    box-shadow:inset 0 1px 0 #8800B7, 0 10px 0 #4E0268;
-    
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+
+  .buttonContainer {
+      width: 12rem;
   }
-  
-  .buttonHome a:active{
-    top:10px;
-    background-color:#8800B7;
-    
-    -webkit-box-shadow:inset 0 1px 0 #8800B7, inset 0 -3px 0 #4E0268;
-    -moz-box-shadow:inset 0 1px 0 #8800B7, inset 0 -3pxpx 0 #4E0268;
-    box-shadow:inset 0 1px 0 #8800B7, inset 0 -3px 0 #4E0268;
+
+  .buttonHome a {
+      font-size: 1rem;
+      padding: 8px 20px;
   }
-  
-  .buttonHome:after{
-    content:"";
-    height:90%;
-    width:100%;
-    padding:4px;
-    position: absolute;
-    bottom:-15px;
-    left:-4px;
-    z-index:-1;
-    background-color:#2B1800;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-  }
+}
