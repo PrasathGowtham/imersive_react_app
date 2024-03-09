@@ -121,7 +121,7 @@ function SoftwareContent() {
   return (
     <>
       <div className="softwareContainer">
-        <Grid container spacing={5}>
+        <Grid container spacing={5} >
           <Grid item xs={12} md={6} lg={4}>
             <Card sx={{ ...projectListStyles.gridStyles }}>
               <ThreeDModelCard gltfPath={sampleModel} style={canvasStyles} />
@@ -156,16 +156,24 @@ function SoftwareContent() {
                 alignItems: "flex-start",
                 flexDirection: "column",
                 justifyContent: "center",
-                gap:5
+                gap: 5,
               }}
             >
-              <Typography>SOFTWARE</Typography>
-              <Typography>
+              <Typography sx={{fontWeight:"800",fontSize:"2.5rem"}}>SOFTWARE</Typography>
+              <Typography sx={{ textAlign: "start" }}>
                 {" "}
                 We Build Tools That Reimagine Your Customer Experience
               </Typography>
-              <Button color="secondary" variant="outlined">
-                Secondary
+              <Button
+                color="secondary"
+                variant="outlined"
+                sx={{
+                  border: "2px solid #8800B7",
+                  borderRadius: ".5rem",
+                  fontWeight: "bold",
+                }}
+              >
+                Learn More
               </Button>
             </Box>
           </Grid>

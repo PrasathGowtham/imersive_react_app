@@ -3,6 +3,7 @@ import carBackGround from "../../assets/lambo.jpg";
 import { Box, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import "./software.css"
+import TexttransitionBlue from "./TexttransitionBlue";
 const BlurredContainer = styled("div")({
   backdropFilter: "blur(5px)",
   padding: "40px",
@@ -78,7 +79,7 @@ function TextTransitions() {
   };
 
   return (
-    <div className="solution">
+    <div className="solution" id="3dservice">
     <Box style={divStyle}>
       <Grid
         container
@@ -153,6 +154,7 @@ function TextTransitions() {
         </Grid>
       </Grid>
     </Box>
+    <TexttransitionBlue/>
     </div>
   );
 }

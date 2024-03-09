@@ -1,8 +1,8 @@
 .immersiveContainer {
-  height: 120vh;
-  padding: 2rem 5rem;
+  height: auto;
+  padding: 2rem 3rem;
   background-color: black;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 @media screen and (max-width: 960px) {

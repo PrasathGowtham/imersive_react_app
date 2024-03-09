@@ -15,7 +15,6 @@ export default function FooterPage() {
     image: {
       height: "100%",
       width: "100%",
-      borderBottomLeftRadius: { md: "6rem", xs: 0 },
     },
     imageGrid: {
       borderBottomLeftRadius: { md: "6rem", xs: 0 },
@@ -52,10 +51,16 @@ export default function FooterPage() {
     //   );
   };
   return (
-    <div className="footerContainer">
+    <div className="footerContainer" id="contact">
       <Grid container>
+      <Grid container sx={{marginBottom:"5rem"}}>
         <Grid item xs={12} md={5} sx={footerStyles.imageGrid}>
-          <img src={sampleImage} alt="imersive" style={footerStyles.image} />
+          <img
+            src={sampleImage}
+            alt="imersive"
+            style={footerStyles.image}
+            className="image"
+          />
         </Grid>
         <Grid
           item
@@ -68,7 +73,7 @@ export default function FooterPage() {
             borderBottomRightRadius: "6rem",
             borderBottomLeftRadius: { xs: "6rem", md: 0 },
             bgcolor: "black",
-        
+            marginBottom: { xs: "5rem", md: 0 },
           }}
         >
           <Grid
@@ -76,68 +81,89 @@ export default function FooterPage() {
             sx={footerStyles.inputField}
             justifyContent="space-between"
             alignItems="center"
+            gap={2}
           >
             <Grid xs={12} md={5} className="c-right ">
-              <input
-                type="text"
-                name="user_name"
-                className="user"
-                placeholder="Name"
-              />
+              <Box
+                sx={{ display: "flex", flexDirection: "column", width: "100%" }}
+              >
+                <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                  First Name
+                </Typography>
+                <input type="text" name="First Name" className="user" />
+              </Box>
             </Grid>
             <Grid xs={12} md={5} className="c-right ">
-              <input
-                type="email"
-                name="user_email"
-                className="user"
-                placeholder="Email"
-              />
+              <Box
+                sx={{ display: "flex", flexDirection: "column", width: "100%" }}
+              >
+                <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                  Last Name
+                </Typography>
+                <input type="name" name="last_name" className="user" />
+              </Box>
+            </Grid>
+
+            <Grid xs={12} md={5} className="c-right ">
+              <Box
+                sx={{ display: "flex", flexDirection: "column", width: "100%" }}
+              >
+                <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                  Company Name
+                </Typography>
+                <input type="text" name="company_name" className="user" />
+              </Box>
             </Grid>
             <Grid xs={12} md={5} className="c-right ">
-              <input
-                type="email"
-                name="user_email"
-                className="user"
-                placeholder="Email"
-              />
-            </Grid>
-            <Grid xs={12} md={5} className="c-right ">
-              <input
-                type="email"
-                name="user_email"
-                className="user"
-                placeholder="Email"
-              />
+              <Box
+                sx={{ display: "flex", flexDirection: "column", width: "100%" }}
+              >
+                <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                  Job Tittle
+                </Typography>
+                <input type="text" name="job_tittle" className="user" />
+              </Box>
             </Grid>
             <Grid xs={12} md={12} className="c-right" sx={{ width: "100%" }}>
-              <textarea
-                name="message"
-                className="user1"
-                placeholder="Message"
-              />
+              <Box
+                sx={{ display: "flex", flexDirection: "column", width: "100%" }}
+              >
+                <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                  Business Email
+                </Typography>
+                <input type="email" name="business_email" className="user" />
+              </Box>
             </Grid>
             <Grid xs={12} md={12}>
-              <Typography sx={{ color: "#fff" }}>
+              <Typography sx={{ color: "#fff", textAlign: "start" }}>
                 Which solution are you most interested in?
               </Typography>
             </Grid>
             <Grid xs={12} md={12} sx={{ color: "#fff" }}>
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox defaultChecked />}
+                  control={
+                    <Checkbox defaultChecked style={{ color: "#fff" }} />
+                  }
                   label="Virtual Stores"
-                  sx={{ borderColor: "#fff" }}
                 />
                 <FormControlLabel
                   required
-                  control={<Checkbox />}
+                  control={<Checkbox style={{ color: "#fff" }} />}
                   label="Gamified Commerce"
                 />
-                <FormControlLabel control={<Checkbox />} label="CGI & VFX" />
+                <FormControlLabel
+                  control={<Checkbox style={{ color: "#fff" }} />}
+                  label="CGI & VFX"
+                />
               </FormGroup>
             </Grid>
             <Grid xs={12} md={12} className="c-right" sx={{ width: "100%" }}>
-              <Button color="secondary" variant="contained">
+              <Button
+                color="secondary"
+                variant="contained"
+                sx={{ width: "100%", borderRadius: ".5rem" }}
+              >
                 SUBMIT
               </Button>
               <span>{done && "Thanks for Contacting me"}</span>
@@ -148,6 +174,7 @@ export default function FooterPage() {
             </Grid>
           </Grid>
         </Grid>
+        </Grid>
         <Grid
           item
           xs={12}
@@ -157,10 +184,19 @@ export default function FooterPage() {
             left: 0,
             right: 0,
             height: "5rem",
-            bgcolor: "black",
+            bgcolor: "#fff",
+            padding:"0 1rem"
           }}
         >
-          <Box sx={{ height: { xs: "22rem", md: "5rem" }, bgcolor: "#fff" ,display:"flex",alignContent:"center"}}>
+          <Box
+            sx={{
+              height: { xs: "22rem", md: "5rem" },
+              bgcolor: "#fff",
+              display: "flex",
+              alignContent: "center",
+              marginTop: ".5rem",
+            }}
+          >
             <Grid container alignItems="center">
               <Grid xs={12} md={2} order={{ xs: 1, md: 0 }}>
                 <Box
@@ -168,7 +204,6 @@ export default function FooterPage() {
                     display: "flex",
                     width: "100%",
                     justifyContent: "space-around",
-                  
                   }}
                 >
                   <Box>
@@ -191,7 +226,7 @@ export default function FooterPage() {
                     display: "flex",
                     width: "100%",
                     justifyContent: "flex-end",
-                   
+
                     gap: 4,
                     fontWeight: "bold",
                     flexDirection: { xs: "column", md: "row" },

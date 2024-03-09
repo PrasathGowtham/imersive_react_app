@@ -1,13 +1,20 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import "./aboutUs.css";
 import aboutus from "../../assets/lambo.jpg";
-import brands from "../../assets/Group 71.svg";
+import tools from "../../assets/abotus logo/tools.svg";
+import analytics from "../../assets/abotus logo/analytics.svg";
+import digital from "../../assets/abotus logo/digital.svg";
+import engage from "../../assets/abotus logo/engage.svg";
+import loyalty from "../../assets/abotus logo/loyalty.svg";
+import returns from "../../assets/abotus logo/returns.svg";
+import solution from "../../assets/abotus logo/solutions.svg";
+
 export default function AboutUs() {
   const styles = {
     immersiveImage: {
       width: "100%",
-      height: "70vh",
+      height: "60vh",
       objectFit: "cover",
       paddingTop: 0,
     },
@@ -20,12 +27,12 @@ export default function AboutUs() {
   };
 
   return (
-    <div className="aboutUsContainer">
+    <div className="aboutUsContainer" id="about">
       <Grid container columnGap={2}>
         <Grid item xs={12} sx={styles.immersiveImage}>
           <img src={aboutus} alt="imersive" style={styles.immersiveImage} />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{margin:"0 2rem"}}>
           <Typography
             sx={{
               textAlign: "center",
@@ -38,7 +45,7 @@ export default function AboutUs() {
             ABOUT US
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{margin:"0 2rem"}}>
           <Typography
             sx={{ textAlign: "center", padding: "0 5rem", marginTop: "4rem" }}
           >
@@ -55,7 +62,7 @@ export default function AboutUs() {
             connections between brands and consumers.
           </Typography>
         </Grid>
-        <Grid item xs={12} sx={{ marginTop: "4rem" }}>
+        <Grid item xs={12} sx={{margin:"4rem 2rem 0 2rem"}}>
           <Grid container>
             <Grid item xs={12} md={4}>
               <Typography
@@ -126,7 +133,7 @@ export default function AboutUs() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{margin:"0 2rem"}}>
           <Typography
             sx={{
               textAlign: "center",
@@ -149,7 +156,7 @@ export default function AboutUs() {
             experience.
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{margin:"0 2rem"}}>
           <Typography
             sx={{
               textAlign: "center",
@@ -191,7 +198,7 @@ export default function AboutUs() {
             digital era.
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{margin:"0 2rem"}}>
           <Typography
             sx={{
               textAlign: "center",
@@ -203,14 +210,139 @@ export default function AboutUs() {
           >
             How we help brands
           </Typography>
-          <Typography
-            sx={{ textAlign: "center", padding: "0 5rem", marginTop: "1rem" }}
-          >
-            <img src={brands} alt="imersive" style={styles.brandsveImage} />
-          </Typography>
+        </Grid>{" "}
+        <Grid container justifyContent="space-around" alignItems="center" sx={{margin:"0 2rem"}}>
+          <Grid xs={12} md={3}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                margin: "2rem",
+              }}
+            >
+              <img
+                src={engage}
+                alt="imersive"
+                style={{ height: "4rem", width: "4rem", marginBottom: "1rem" }}
+              />
+              <Typography>ENGAGE CUSTOMERS</Typography>
+            </Box>
+          </Grid>
+          <Grid xs={6} md={3}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                margin: "2rem",
+              }}
+            >
+              <img
+                src={analytics}
+                alt="imersive"
+                style={{ height: "4rem", width: "4rem", marginBottom: "1rem" }}
+              />
+              <Typography>POS & ANALYTICS</Typography>
+            </Box>
+          </Grid>
+          <Grid xs={6} md={3}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                margin: "2rem",
+              }}
+            >
+              <img
+                src={returns}
+                alt="imersive"
+                style={{ height: "4rem", width: "4rem", marginBottom: "1rem" }}
+              />
+              <Typography>REDUCE RETURNS</Typography>
+            </Box>
+          </Grid>
+          <Grid xs={12} md={3}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                margin: "2rem",
+              }}
+            >
+              <img
+                src={loyalty}
+                alt="imersive"
+                style={{ height: "4rem", width: "4rem", marginBottom: "1rem" }}
+              />
+              <Typography>BRAND LOYALTY</Typography>
+            </Box>
+          </Grid>
+          <Grid xs={6} md={3}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                margin: "2rem",
+              }}
+            >
+              <img
+                src={digital}
+                alt="imersive"
+                style={{ height: "4rem", width: "4rem", marginBottom: "1rem" }}
+              />
+              <Typography>INCRERASE DIGITAL SALES</Typography>
+            </Box>
+          </Grid>
+          <Grid xs={6} md={3}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
+              <img
+                src={tools}
+                alt="imersive"
+                style={{ height: "4rem", width: "4rem", marginBottom: "1rem" }}
+              />
+              <Typography>EMERGING TECH TOOLKITS</Typography>
+            </Box>
+          </Grid>
+          <Grid xs={12} md={3}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
+              <img
+                src={solution}
+                alt="imersive"
+                style={{ height: "4rem", width: "4rem", marginBottom: "1rem" }}
+              />
+              <Typography>DEVICE AGNOSTIC SOLUTIONS</Typography>
+            </Box>
+          </Grid>
         </Grid>
-        <Grid item xs={12}>
-          <Button color="secondary" variant="contained" sx={{width:"15rem",height:"3rem"}}>
+        <Grid item xs={12} sx={{ margin: "2rem 0 4rem 0" }}>
+          <Button
+            color="secondary"
+            variant="contained"
+            // sx={{width:"2rem"}}
+          >
             CHECK NOW
           </Button>
         </Grid>

@@ -1,5 +1,13 @@
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
 import "./App.css";
-import ParallaxSmooth from "./components/ParallaxSmooth";
 import NavBar from "./components/Home";
 import HomeScreen from "./components/Home/home";
 import ProjectList from "./components/ProjectsList/projectList";
@@ -8,22 +16,39 @@ import WhatIsImersive from "./components/whatIsImersive/imersive";
 import AboutUs from "./components/Aboutus/aboutUs";
 import TextTransitions from "./components/Software/TextTransitions";
 import FooterPage from "./components/Footer/footer";
-
+import ParallaxDivs from "./components/ParallaxDivs";
+import Careers from "./components/careers/Careers";
+import Blog from "./components/blog/Blog";
+import QuantumEn from "./components/NewSoftwareComponent/QuantumEn";
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <HomeScreen />
-      <WhatIsImersive />
-      <SoftwareContent />
-      <TextTransitions/>
-      <ProjectList />
-      <AboutUs />
-      <FooterPage/>
-
-      {/* final out put  */}
-      {/* <ParallaxSmooth /> */}
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Router>
+          <Routes>
+            <Route path="/software" element={<QuantumEn />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <NavBar />
+                  <HomeScreen />
+                  <WhatIsImersive />
+                  <SoftwareContent />
+                  <TextTransitions />
+                  <ProjectList />
+                  <AboutUs />
+                  <Blog />
+                  <Careers />
+                  <FooterPage />
+                </>
+              }
+            />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Router>
+      </div>
+    </ThemeProvider>
   );
 }
 

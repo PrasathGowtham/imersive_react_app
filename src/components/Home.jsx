@@ -17,7 +17,8 @@ import {
 import { styled } from "@mui/system";
 import MenuIcon from "@mui/icons-material/Menu";
 import logoImmersive from "../assets/logo-White 1.svg";
-
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
 const StyledAppBar = styled(AppBar)({
   position: "fixed",
   top: 20,
@@ -47,7 +48,7 @@ const MenuSegment = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  width:"100%"
+  width: "100%",
 });
 
 // New styled component for the drawer icon
@@ -85,6 +86,7 @@ const DrawerHeader = styled(Box)({
 });
 
 const NavBar = () => {
+  const navigate = useNavigate();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -103,7 +105,7 @@ const NavBar = () => {
       <StyledAppBar>
         <StyledToolbar>
           <MenuSegment>
-            <Box sx={{display:"flex",alignItems:"center"}}>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
               <img src={logoImmersive} alt="logo icon" />
               <Typography>IMERSIVE</Typography>
             </Box>
@@ -119,25 +121,47 @@ const NavBar = () => {
           {!isSmallScreen && (
             <NavigationSegment>
               <Typography style={{ marginRight: "20px", cursor: "pointer" }}>
-                HOME
+                <Link activeClass="active" to="home" spy={true} smooth={true}>
+                  HOME
+                </Link>
               </Typography>
-              <Typography style={{ marginRight: "20px", cursor: "pointer" }}>
+              <Typography
+                style={{ marginRight: "20px", cursor: "pointer" }}
+                onClick={() => navigate("/software")}
+              >
                 SOFTWARE
               </Typography>
-              <Typography style={{ marginRight: "20px", cursor: "pointer", whiteSpace: "nowrap" }}>
-                3D SERVICES
+              <Typography
+                style={{
+                  marginRight: "20px",
+                  cursor: "pointer",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                <Link to="3dservice" spy={true} smooth={true}>
+                  3D SERVICES
+                </Link>
               </Typography>
               <Typography style={{ marginRight: "20px", cursor: "pointer" }}>
-                PROJECTS
+                <Link to="project" spy={true} smooth={true}>
+                  PROJECTS
+                </Link>
+              </Typography>
+
+              <Typography style={{ marginRight: "20px", cursor: "pointer" }}>
+                <Link to="about" spy={true} smooth={true}>
+                  ABOUT
+                </Link>
               </Typography>
               <Typography style={{ marginRight: "20px", cursor: "pointer" }}>
-                ABOUT
+                <Link to="blog" spy={true} smooth={true}>
+                  BLOG
+                </Link>
               </Typography>
               <Typography style={{ marginRight: "20px", cursor: "pointer" }}>
-                BLOG
-              </Typography>
-              <Typography style={{ marginRight: "20px", cursor: "pointer" }}>
-                CONTACT
+                <Link to="contact" spy={true} smooth={true}>
+                  CONTACT
+                </Link>
               </Typography>
             </NavigationSegment>
           )}
@@ -182,7 +206,9 @@ const NavBar = () => {
                 "CONTACT",
               ].map((text, index) => (
                 <ListItem button key={text} onClick={handleNavItemClicked}>
-                  <Typography>{text}</Typography>
+                  <Typography sx={{ fontWeight: "bold", fontSize: "2rem" }}>
+                    {text}
+                  </Typography>
                 </ListItem>
               ))}
             </DrawerList>

@@ -1,6 +1,6 @@
 /* Responsive styles for FooterPage */
 .footerContainer {
-  height: 90vh;
+  height: 100%;
   width: 100%;
   padding: 0;
   background-color: white;
@@ -39,6 +39,7 @@ textarea {
   border: 2px solid var(--orange);
   border-radius: 8px;
   font-size: 16px;
+  background-color: gray;
 }
 
 .c-blur1 {
@@ -46,14 +47,18 @@ textarea {
   left: 2rem; /* Adjust the left value for smaller screens */
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .footerContainer {
     padding: 0;
     flex-direction: column;
     gap: 2rem; /* Adjust the gap for smaller screens */
     height: auto;
+    
   }
 
+  .form{
+    margin-bottom: 8rem;
+  }
   .contact-form {
     margin-top: 1rem; /* Adjust the margin-top for smaller screens */
   }
@@ -63,4 +68,11 @@ textarea {
   }
 }
 
+.image {
+  border-bottom-left-radius: 0; /* Initial value */
 
+  @media (min-width: 900px) {
+    /* Apply styles for xs (extra small) screens and larger */
+    border-bottom-left-radius: 6rem;
+  }
+}

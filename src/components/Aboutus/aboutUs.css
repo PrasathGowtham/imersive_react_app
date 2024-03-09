@@ -1,7 +1,8 @@
 /* Responsive styles for AboutUs */
 .aboutUsContainer {
-  height: 350vh;
+  height:100%;
   background-color: #fff;
+  
 }
 
 @media screen and (max-width: 960px) {
@@ -28,6 +29,6 @@
   }
 
   .aboutUsContainer .MuiButton-root {
-    width: 100%; /* Adjust the width for the button on smaller screens */
+    width: 50%; /* Adjust the width for the button on smaller screens */
   }
 }

@@ -1,0 +1,9 @@
+/* VerticalText.css */
+.vertical-text {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-right: 10px;
+  color: #FBFBFB;
+  font-family: inherit;
+}

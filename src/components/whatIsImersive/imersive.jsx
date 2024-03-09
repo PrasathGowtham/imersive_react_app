@@ -11,8 +11,8 @@ export default function WhatIsImersive() {
     },
     immersiveImage: {
       width: "100%",
-      height: "100%",
-      objectFit: "cover",
+      height: "60vh",
+      // objectFit: "cover",
     },
   };
 
@@ -20,13 +20,19 @@ export default function WhatIsImersive() {
     <div className="immersiveContainer">
       <Grid container spacing={2}>
         <Grid item xs={12} sx={styles.headerGrid}>
-          <Typography>WHAT IS</Typography>
+          <Typography sx={{ fontSize: "4rem" }}>WHAT IS</Typography>
         </Grid>
         <Grid item xs={12} sx={styles.immersiveImage}>
           <img src={imersive} alt="imersive" style={styles.immersiveImage} />
         </Grid>
         <Grid item xs={12}>
-          <Typography sx={{ textAlign: "center", padding: "0 5rem",color:"#fff" }}>
+          <Typography
+            sx={{
+              textAlign: "center",
+              padding: {md:"2rem 5rem 2rem 5rem",xs:"2rem 0"},
+              color: "#fff",
+            }}
+          >
             Imersive.io is a B2B company pioneering experiential e-commerce
             solutions for brands and retailers, empowering them to craft
             captivating 3D commerce experiences seamlessly integrated into
@@ -34,7 +40,15 @@ export default function WhatIsImersive() {
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <Button color="secondary" variant="outlined">
+          <Button
+            color="secondary"
+            variant="outlined"
+            sx={{
+              border: "2px solid #8800B7",
+              borderRadius: ".5rem",
+              fontWeight: "bold",
+            }}
+          >
             LEARN MORE
           </Button>
         </Grid>

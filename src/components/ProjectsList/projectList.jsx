@@ -49,8 +49,8 @@ function ProjectList() {
   };
   return (
     <>
-      <div className="projectListContainer">
-        <Grid container spacing={2}>
+      <div className="projectListContainer" id="project">
+        <Grid container spacing={2} sx={{padding:{md:"0 5rem",xs:"0 2rem"}}}>
           <Grid item xs={12} md={6} lg={9}>
             <Card
               sx={{
