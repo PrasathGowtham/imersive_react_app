@@ -3,6 +3,9 @@ import "./home.css";
 import imersiveVideo from "../../assets/video/Store_Trailer_V2.mp4"
 
 function HomeScreen() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="homeContainer" id="home">
       <div style={{ width: "100vw", height: "100%", overflow: "hidden" }}>

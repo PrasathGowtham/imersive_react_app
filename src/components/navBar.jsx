@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/system";
 import MenuIcon from "@mui/icons-material/Menu";
-import logoImmersive from "../assets/logo-White 1.svg";
+import logoImmersive from "../assets/immersive logo.svg";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 const StyledAppBar = styled(AppBar)({
@@ -95,7 +95,7 @@ const NavBar = () => {
     setDrawerOpen(open);
   };
 
-  const handleDrawerItemClick =() => {
+  const handleDrawerItemClick = () => {
     setDrawerOpen(false);
   };
   return (
@@ -104,8 +104,7 @@ const NavBar = () => {
         <StyledToolbar>
           <MenuSegment>
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <img src={logoImmersive} alt="logo icon" />
-              <Typography>IMERSIVE</Typography>
+              <img src={logoImmersive} alt="logo icon" style={{height:"10rem",width:"10rem"}}/>
             </Box>
 
             {isSmallScreen && (
@@ -198,7 +197,7 @@ const NavBar = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-start",
-                  paddingLeft:"1rem"
+                  paddingLeft: "1rem",
                 }}
               >
                 <Link

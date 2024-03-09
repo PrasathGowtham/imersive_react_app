@@ -21,6 +21,7 @@ import Careers from "./components/careers/Careers";
 import Blog from "./components/blog/Blog";
 import QuantumEn from "./components/NewSoftwareComponent/QuantumEn";
 function App() {
+ 
   return (
     <ThemeProvider theme={theme}>
       <div className="App">

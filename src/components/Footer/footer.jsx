@@ -9,6 +9,7 @@ import twitter from "../../assets/footer/Social Icons.svg";
 import insta from "../../assets/footer/Social Icons (1).svg";
 import linkedin from "../../assets/footer/Social Icons (2).svg";
 import delta from "../../assets/footer/Social Icons (3).svg";
+import { useForm, Controller } from "react-hook-form";
 import { Link } from "react-scroll";
 export default function FooterPage() {
   const footerStyles = {
@@ -27,28 +28,23 @@ export default function FooterPage() {
     },
   };
 
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
   const form = useRef();
   const [done, setDone] = useState(false);
-  const sendEmail = (e) => {
-    e.preventDefault();
 
-    // emailjs
-    //   .sendForm(
-    //     "service_2mu5xtl",
-    //     "template_m5udu2c",
-    //     form.current,
-    //     "VLwg1ltOWvnCYAiK_"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       setDone(true);
-    //       form.reset();
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+  const sendEmail = (data) => {
+    console.log(data);
+    window.alert("ljhg")
+  };
+
+  const onSubmit = (data) => {
+    console.log(data);
+    sendEmail(data);
   };
   return (
     <div className="footerContainer" id="contact">
@@ -76,123 +72,140 @@ export default function FooterPage() {
               marginBottom: { xs: "5rem", md: 0 },
             }}
           >
-            <Grid
-              container
-              sx={footerStyles.inputField}
-              justifyContent="space-between"
-              alignItems="center"
-              gap={2}
-            >
-              <Grid xs={12} md={5} className="c-right ">
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    width: "100%",
-                  }}
-                >
-                  <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                    First Name
-                  </Typography>
-                  <input type="text" name="First Name" className="user" />
-                </Box>
-              </Grid>
-              <Grid xs={12} md={5} className="c-right ">
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    width: "100%",
-                  }}
-                >
-                  <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                    Last Name
-                  </Typography>
-                  <input type="name" name="last_name" className="user" />
-                </Box>
-              </Grid>
+            <form ref={form} onSubmit={sendEmail}>
+              <Grid
+                container
+                sx={footerStyles.inputField}
+                justifyContent="space-between"
+                alignItems="center"
+                gap={2}
+              >
+                <Grid xs={12} md={5} className="c-right ">
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: "100%",
+                    }}
+                  >
+                    <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                      First Name
+                    </Typography>
+                    <input type="text" name="First Name" className="user" />
+                  </Box>
+                </Grid>
+                <Grid xs={12} md={5} className="c-right ">
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: "100%",
+                    }}
+                  >
+                    <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                      Last Name
+                    </Typography>
+                    <input type="name" name="last_name" className="user" />
+                  </Box>
+                </Grid>
 
-              <Grid xs={12} md={5} className="c-right ">
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    width: "100%",
-                  }}
+                <Grid xs={12} md={5} className="c-right ">
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: "100%",
+                    }}
+                  >
+                    <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                      Company Name
+                    </Typography>
+                    <input type="text" name="company_name" className="user" />
+                  </Box>
+                </Grid>
+                <Grid xs={12} md={5} className="c-right ">
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: "100%",
+                    }}
+                  >
+                    <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                      Job Tittle
+                    </Typography>
+                    <input type="text" name="job_tittle" className="user" />
+                  </Box>
+                </Grid>
+                <Grid
+                  xs={12}
+                  md={12}
+                  className="c-right"
+                  sx={{ width: "100%" }}
                 >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: "100%",
+                    }}
+                  >
+                    <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                      Business Email
+                    </Typography>
+                    <input
+                      type="email"
+                      name="business_email"
+                      className="user"
+                    />
+                  </Box>
+                </Grid>
+                <Grid xs={12} md={12}>
                   <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                    Company Name
+                    Which solution are you most interested in?
                   </Typography>
-                  <input type="text" name="company_name" className="user" />
-                </Box>
-              </Grid>
-              <Grid xs={12} md={5} className="c-right ">
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    width: "100%",
-                  }}
+                </Grid>
+                <Grid xs={12} md={12} sx={{ color: "#fff" }}>
+                  <FormGroup>
+                    <FormControlLabel
+                      control={
+                        <Checkbox defaultChecked style={{ color: "#fff" }} />
+                      }
+                      label="Virtual Stores"
+                    />
+                    <FormControlLabel
+                      required
+                      control={<Checkbox style={{ color: "#fff" }} />}
+                      label="Gamified Commerce"
+                    />
+                    <FormControlLabel
+                      control={<Checkbox style={{ color: "#fff" }} />}
+                      label="CGI & VFX"
+                    />
+                  </FormGroup>
+                </Grid>
+                <Grid
+                  xs={12}
+                  md={12}
+                  className="c-right"
+                  sx={{ width: "100%" }}
                 >
-                  <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                    Job Tittle
-                  </Typography>
-                  <input type="text" name="job_tittle" className="user" />
-                </Box>
+                  <Button
+                    type="submit"
+                    color="secondary"
+                    variant="contained"
+                    sx={{ width: "100%", borderRadius: ".5rem" }}
+                  >
+                    SUBMIT
+                  </Button>
+                  <span>{done && "Thanks for Contacting me"}</span>
+                  <div
+                    className="blur c-blur1"
+                    style={{ background: "var(--purple)" }}
+                  ></div>
+                </Grid>
               </Grid>
-              <Grid xs={12} md={12} className="c-right" sx={{ width: "100%" }}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    width: "100%",
-                  }}
-                >
-                  <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                    Business Email
-                  </Typography>
-                  <input type="email" name="business_email" className="user" />
-                </Box>
-              </Grid>
-              <Grid xs={12} md={12}>
-                <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                  Which solution are you most interested in?
-                </Typography>
-              </Grid>
-              <Grid xs={12} md={12} sx={{ color: "#fff" }}>
-                <FormGroup>
-                  <FormControlLabel
-                    control={
-                      <Checkbox defaultChecked style={{ color: "#fff" }} />
-                    }
-                    label="Virtual Stores"
-                  />
-                  <FormControlLabel
-                    required
-                    control={<Checkbox style={{ color: "#fff" }} />}
-                    label="Gamified Commerce"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox style={{ color: "#fff" }} />}
-                    label="CGI & VFX"
-                  />
-                </FormGroup>
-              </Grid>
-              <Grid xs={12} md={12} className="c-right" sx={{ width: "100%" }}>
-                <Button
-                  color="secondary"
-                  variant="contained"
-                  sx={{ width: "100%", borderRadius: ".5rem" }}
-                >
-                  SUBMIT
-                </Button>
-                <span>{done && "Thanks for Contacting me"}</span>
-                <div
-                  className="blur c-blur1"
-                  style={{ background: "var(--purple)" }}
-                ></div>
-              </Grid>
-            </Grid>
+            </form>
           </Grid>
         </Grid>
         <Grid

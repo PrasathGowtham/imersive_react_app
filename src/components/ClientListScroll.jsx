@@ -20,7 +20,7 @@ export default function ClientListScroll() {
         <div className="logo-slide">
           <img src={shopfy} rel="" />
           <img src={Alogo} rel="" />
-          <img src={Aws} rel="" />
+          {/* <img src={Aws} rel="" /> */}
           <img src={Biba} rel="" />
           <img src={Biskit} rel="" />
           <img src={Cbazzar} rel="" />
@@ -33,7 +33,7 @@ export default function ClientListScroll() {
         <div className="logo-slide">
           <img src={shopfy} rel="" />
           <img src={Alogo} rel="" />
-          <img src={Aws} rel="" />
+          {/* <img src={Aws} rel="" /> */}
           <img src={Biba} rel="" />
           <img src={Biskit} rel="" />
           <img src={Cbazzar} rel="" />

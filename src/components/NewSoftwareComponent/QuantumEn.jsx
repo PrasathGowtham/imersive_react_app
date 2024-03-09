@@ -8,9 +8,12 @@ import Icon4 from "../../assets/socialIcons/socialFour.svg";
 import blueGrain from "../../assets/bluegrains.jpg";
 import VerticalText from "../custom/VerticalText";
 import XrStore from "./XrStore";
-import NavBar from "../navBar";
+import SoftwareThree from "./SoftwareThree";
 
 export default function QuantumEn() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const divStyle = {
     backgroundImage: `url(${guyImg})`,
     backgroundSize: "cover",
@@ -31,7 +34,6 @@ export default function QuantumEn() {
   };
   return (
     <Grid container sx={{ fontFamily: "inherit" }}>
-      {/* <NavBar/> */}
       <Grid item xs={12} sm={12} md={12} xl={12}>
         <Box sx={divStyle} color={"white"}>
           <Stack
@@ -93,7 +95,7 @@ export default function QuantumEn() {
                 >
                   <Typography
                     sx={{
-                      fontSize: "4em",
+                      fontSize: { xs: "2rem", md: "4rem" },
                       letterSpacing: "2px",
                       fontWeight: 600,
                       color: "white",
@@ -130,6 +132,9 @@ export default function QuantumEn() {
       </Grid>
       <Grid item xs={12} sm={12} md={12} xl={12}>
         <XrStore />
+      </Grid>
+      <Grid item xs={12} sm={12} md={12} xl={12}>
+        <SoftwareThree />
       </Grid>
     </Grid>
   );
