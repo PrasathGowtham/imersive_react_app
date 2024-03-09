@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import "./aboutUs.css";
-import aboutus from "../../assets/lambo.jpg";
+import aboutus from "../../assets/imersiveImage.png";
 import tools from "../../assets/abotus logo/tools.svg";
 import analytics from "../../assets/abotus logo/analytics.svg";
 import digital from "../../assets/abotus logo/digital.svg";
@@ -14,8 +14,8 @@ export default function AboutUs() {
   const styles = {
     immersiveImage: {
       width: "100%",
-      height: "60vh",
-      objectFit: "cover",
+      height: "70vh",
+      objectFit: "fill",
       paddingTop: 0,
     },
     brandsveImage: {

@@ -1,7 +1,7 @@
 .homeContainer {
   height: 80vh;
   margin: 6rem 1rem 0rem 1rem;
-  background-image: url("../../assets/homeImage1.svg");
+  /* background-image: url("../../assets/homeimage.jpeg"); */
   background-size: cover;
   background-position: center;
   display: flex;
