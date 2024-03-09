@@ -22,7 +22,7 @@ export default function Careers() {
   ];
 
   return (
-    <Box sx={{ height: "100vh" }} id="careear">
+    <Box sx={{ height:"auto" ,margin:"3rem 0"}} id="careear">
       <Box
         sx={{
           display: "flex",
@@ -31,7 +31,7 @@ export default function Careers() {
           gap: 5,
         }}
       >
-        <Typography sx={{ fontSize: "16px", color: "white" }}>
+        <Typography sx={{ fontSize: "2rem", color: "white" }}>
           Careers
         </Typography>
         <Typography sx={{ fontSize: "12px", color: "white", width: "50%" }}>
@@ -46,6 +46,7 @@ export default function Careers() {
         sx={{
           display: "flex",
           justifyContent: "center",
+          flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
           marginTop: "40px",
           gap: 4,

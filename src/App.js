@@ -8,7 +8,7 @@ import {
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import "./App.css";
-import NavBar from "./components/Home";
+import NavBar from "./components/navBar";
 import HomeScreen from "./components/Home/home";
 import ProjectList from "./components/ProjectsList/projectList";
 import SoftwareContent from "./components/Software/software";
@@ -38,7 +38,7 @@ function App() {
                   <TextTransitions />
                   <ProjectList />
                   <AboutUs />
-                  <Blog />
+                  {/* <Blog /> */}
                   <Careers />
                   <FooterPage />
                 </>

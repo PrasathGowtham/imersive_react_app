@@ -1,7 +1,7 @@
 .homeContainer {
   height: 80vh;
   margin: 6rem 1rem 0rem 1rem;
-  /* background-image: url("../../assets/lambo.jpg"); */
+  background-image: url("../../assets/lambo.jpg");
   background-size: cover;
   background-position: center;
   display: flex;

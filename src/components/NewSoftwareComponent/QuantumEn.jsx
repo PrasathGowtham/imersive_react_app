@@ -8,6 +8,7 @@ import Icon4 from "../../assets/socialIcons/socialFour.svg";
 import blueGrain from "../../assets/bluegrains.jpg";
 import VerticalText from "../custom/VerticalText";
 import XrStore from "./XrStore";
+import NavBar from "../navBar";
 
 export default function QuantumEn() {
   const divStyle = {
@@ -30,6 +31,7 @@ export default function QuantumEn() {
   };
   return (
     <Grid container sx={{ fontFamily: "inherit" }}>
+      {/* <NavBar/> */}
       <Grid item xs={12} sm={12} md={12} xl={12}>
         <Box sx={divStyle} color={"white"}>
           <Stack

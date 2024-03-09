@@ -9,7 +9,7 @@ import twitter from "../../assets/footer/Social Icons.svg";
 import insta from "../../assets/footer/Social Icons (1).svg";
 import linkedin from "../../assets/footer/Social Icons (2).svg";
 import delta from "../../assets/footer/Social Icons (3).svg";
-
+import { Link } from "react-scroll";
 export default function FooterPage() {
   const footerStyles = {
     image: {
@@ -53,127 +53,147 @@ export default function FooterPage() {
   return (
     <div className="footerContainer" id="contact">
       <Grid container>
-      <Grid container sx={{marginBottom:"5rem"}}>
-        <Grid item xs={12} md={5} sx={footerStyles.imageGrid}>
-          <img
-            src={sampleImage}
-            alt="imersive"
-            style={footerStyles.image}
-            className="image"
-          />
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={7}
-          sx={{
-            padding: "3rem",
-            elevation: 5,
-            boxShadow: 5,
-            borderBottomRightRadius: "6rem",
-            borderBottomLeftRadius: { xs: "6rem", md: 0 },
-            bgcolor: "black",
-            marginBottom: { xs: "5rem", md: 0 },
-          }}
-        >
+        <Grid container sx={{ marginBottom: "5rem" }}>
+          <Grid item xs={12} md={5} sx={footerStyles.imageGrid}>
+            <img
+              src={sampleImage}
+              alt="imersive"
+              style={footerStyles.image}
+              className="image"
+            />
+          </Grid>
           <Grid
-            container
-            sx={footerStyles.inputField}
-            justifyContent="space-between"
-            alignItems="center"
-            gap={2}
+            item
+            xs={12}
+            md={7}
+            sx={{
+              padding: "3rem",
+              elevation: 5,
+              boxShadow: 5,
+              borderBottomRightRadius: "6rem",
+              borderBottomLeftRadius: { xs: "6rem", md: 0 },
+              bgcolor: "black",
+              marginBottom: { xs: "5rem", md: 0 },
+            }}
           >
-            <Grid xs={12} md={5} className="c-right ">
-              <Box
-                sx={{ display: "flex", flexDirection: "column", width: "100%" }}
-              >
-                <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                  First Name
-                </Typography>
-                <input type="text" name="First Name" className="user" />
-              </Box>
-            </Grid>
-            <Grid xs={12} md={5} className="c-right ">
-              <Box
-                sx={{ display: "flex", flexDirection: "column", width: "100%" }}
-              >
-                <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                  Last Name
-                </Typography>
-                <input type="name" name="last_name" className="user" />
-              </Box>
-            </Grid>
+            <Grid
+              container
+              sx={footerStyles.inputField}
+              justifyContent="space-between"
+              alignItems="center"
+              gap={2}
+            >
+              <Grid xs={12} md={5} className="c-right ">
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                  }}
+                >
+                  <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                    First Name
+                  </Typography>
+                  <input type="text" name="First Name" className="user" />
+                </Box>
+              </Grid>
+              <Grid xs={12} md={5} className="c-right ">
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                  }}
+                >
+                  <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                    Last Name
+                  </Typography>
+                  <input type="name" name="last_name" className="user" />
+                </Box>
+              </Grid>
 
-            <Grid xs={12} md={5} className="c-right ">
-              <Box
-                sx={{ display: "flex", flexDirection: "column", width: "100%" }}
-              >
+              <Grid xs={12} md={5} className="c-right ">
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                  }}
+                >
+                  <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                    Company Name
+                  </Typography>
+                  <input type="text" name="company_name" className="user" />
+                </Box>
+              </Grid>
+              <Grid xs={12} md={5} className="c-right ">
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                  }}
+                >
+                  <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                    Job Tittle
+                  </Typography>
+                  <input type="text" name="job_tittle" className="user" />
+                </Box>
+              </Grid>
+              <Grid xs={12} md={12} className="c-right" sx={{ width: "100%" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                  }}
+                >
+                  <Typography sx={{ color: "#fff", textAlign: "start" }}>
+                    Business Email
+                  </Typography>
+                  <input type="email" name="business_email" className="user" />
+                </Box>
+              </Grid>
+              <Grid xs={12} md={12}>
                 <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                  Company Name
+                  Which solution are you most interested in?
                 </Typography>
-                <input type="text" name="company_name" className="user" />
-              </Box>
-            </Grid>
-            <Grid xs={12} md={5} className="c-right ">
-              <Box
-                sx={{ display: "flex", flexDirection: "column", width: "100%" }}
-              >
-                <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                  Job Tittle
-                </Typography>
-                <input type="text" name="job_tittle" className="user" />
-              </Box>
-            </Grid>
-            <Grid xs={12} md={12} className="c-right" sx={{ width: "100%" }}>
-              <Box
-                sx={{ display: "flex", flexDirection: "column", width: "100%" }}
-              >
-                <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                  Business Email
-                </Typography>
-                <input type="email" name="business_email" className="user" />
-              </Box>
-            </Grid>
-            <Grid xs={12} md={12}>
-              <Typography sx={{ color: "#fff", textAlign: "start" }}>
-                Which solution are you most interested in?
-              </Typography>
-            </Grid>
-            <Grid xs={12} md={12} sx={{ color: "#fff" }}>
-              <FormGroup>
-                <FormControlLabel
-                  control={
-                    <Checkbox defaultChecked style={{ color: "#fff" }} />
-                  }
-                  label="Virtual Stores"
-                />
-                <FormControlLabel
-                  required
-                  control={<Checkbox style={{ color: "#fff" }} />}
-                  label="Gamified Commerce"
-                />
-                <FormControlLabel
-                  control={<Checkbox style={{ color: "#fff" }} />}
-                  label="CGI & VFX"
-                />
-              </FormGroup>
-            </Grid>
-            <Grid xs={12} md={12} className="c-right" sx={{ width: "100%" }}>
-              <Button
-                color="secondary"
-                variant="contained"
-                sx={{ width: "100%", borderRadius: ".5rem" }}
-              >
-                SUBMIT
-              </Button>
-              <span>{done && "Thanks for Contacting me"}</span>
-              <div
-                className="blur c-blur1"
-                style={{ background: "var(--purple)" }}
-              ></div>
+              </Grid>
+              <Grid xs={12} md={12} sx={{ color: "#fff" }}>
+                <FormGroup>
+                  <FormControlLabel
+                    control={
+                      <Checkbox defaultChecked style={{ color: "#fff" }} />
+                    }
+                    label="Virtual Stores"
+                  />
+                  <FormControlLabel
+                    required
+                    control={<Checkbox style={{ color: "#fff" }} />}
+                    label="Gamified Commerce"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox style={{ color: "#fff" }} />}
+                    label="CGI & VFX"
+                  />
+                </FormGroup>
+              </Grid>
+              <Grid xs={12} md={12} className="c-right" sx={{ width: "100%" }}>
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  sx={{ width: "100%", borderRadius: ".5rem" }}
+                >
+                  SUBMIT
+                </Button>
+                <span>{done && "Thanks for Contacting me"}</span>
+                <div
+                  className="blur c-blur1"
+                  style={{ background: "var(--purple)" }}
+                ></div>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
         </Grid>
         <Grid
           item
@@ -185,7 +205,7 @@ export default function FooterPage() {
             right: 0,
             height: "5rem",
             bgcolor: "#fff",
-            padding:"0 1rem"
+            padding: "0 1rem",
           }}
         >
           <Box
@@ -233,7 +253,12 @@ export default function FooterPage() {
                   }}
                 >
                   <Typography>About</Typography>
-                  <Typography>Careers</Typography>{" "}
+                  <Typography>
+                    {" "}
+                    <Link to="careear" spy={true} smooth={true}>
+                      Careers{" "}
+                    </Link>
+                  </Typography>{" "}
                   <Typography>Copyright notice</Typography>{" "}
                   <Typography>Privacy Policy</Typography>{" "}
                   <Typography>Terms of Use</Typography>
