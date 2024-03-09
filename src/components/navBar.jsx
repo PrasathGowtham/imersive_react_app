@@ -95,13 +95,8 @@ const NavBar = () => {
     setDrawerOpen(open);
   };
 
-  const handleNavItemClicked = () => {
+  const handleDrawerItemClick =() => {
     setDrawerOpen(false);
-    // Add logic to handle navigation item click
-  };
-  const handleSoftwareClicked = () => {
-    setDrawerOpen(false);
-    navigate("/software"); // Use the navigate function for "SOFTWARE" link
   };
   return (
     <div>
@@ -198,33 +193,82 @@ const NavBar = () => {
               </DrawerIconButton>
             </DrawerHeader>
             <DrawerList>
-              {[
-                { text: "HOME", to: "home" },
-                {
-                  text: "SOFTWARE",
-                  to: "/software",
-                  onClick: handleSoftwareClicked,
-                },
-                { text: "3D SERVICES", to: "3dservice" },
-                { text: "PROJECTS", to: "project" },
-                { text: "ABOUT", to: "about" },
-                { text: "CONTACT", to: "contact" },
-              ].map((item, index) => (
-                <ListItem button key={item.text} onClick={handleNavItemClicked}>
-                  <Link
-                    to={item.to}
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    onClick={item.onClick} // Use the onClick handler for this link
-                  >
-                    <Typography sx={{ fontWeight: "bold", fontSize: "2rem" }}>
-                      {item.text}
-                    </Typography>
-                  </Link>
-                </ListItem>
-              ))}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  paddingLeft:"1rem"
+                }}
+              >
+                <Link
+                  to={"home"}
+                  spy={true}
+                  smooth={true}
+                  // offset={-70}
+                  onClick={handleDrawerItemClick}
+                  // duration={500}
+                >
+                  <Typography sx={{ fontWeight: "bold", fontSize: "2rem" }}>
+                    HOME
+                  </Typography>
+                </Link>
+
+                <Typography
+                  sx={{ fontWeight: "bold", fontSize: "2rem" }}
+                  onClick={() => navigate("/software")}
+                >
+                  SOFTWARE
+                </Typography>
+                <Link
+                  to={"3dservice"}
+                  onClick={handleDrawerItemClick}
+                  spy={true}
+                  smooth={true}
+                  // offset={-70}
+                  // duration={500}
+                >
+                  <Typography sx={{ fontWeight: "bold", fontSize: "2rem" }}>
+                    3D SERVICES
+                  </Typography>
+                </Link>
+                <Link
+                  to={"project"}
+                  onClick={handleDrawerItemClick}
+                  spy={true}
+                  smooth={true}
+                  // offset={-70}
+                  // duration={500}
+                >
+                  <Typography sx={{ fontWeight: "bold", fontSize: "2rem" }}>
+                    PROJECTS
+                  </Typography>
+                </Link>
+                <Link
+                  to={"about"}
+                  onClick={handleDrawerItemClick}
+                  spy={true}
+                  smooth={true}
+                  // offset={-70}
+                  // duration={500}
+                >
+                  <Typography sx={{ fontWeight: "bold", fontSize: "2rem" }}>
+                    ABOUT
+                  </Typography>
+                </Link>
+                <Link
+                  to={"contact"}
+                  spy={true}
+                  smooth={true}
+                  onClick={handleDrawerItemClick}
+                  // offset={-70}
+                  // duration={500}
+                >
+                  <Typography sx={{ fontWeight: "bold", fontSize: "2rem" }}>
+                    CONTACT
+                  </Typography>
+                </Link>
+              </Box>
             </DrawerList>
           </DrawerContainer>
         </Drawer>
