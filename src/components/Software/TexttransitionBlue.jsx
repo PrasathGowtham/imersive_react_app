@@ -1,11 +1,12 @@
 import React from "react";
-import blueMix from "../../assets/bluemix.png";
+import blueMix from "../../assets/3dservices/Frame66.png";
 import { Box, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 const BlurredContainer = styled("div")({
   backdropFilter: "blur(5px)",
   padding: "40px",
+  objectFit:"cover",
   width: "90%",
   height: "100%",
 });
@@ -13,6 +14,7 @@ const BlurredContainer = styled("div")({
 const ContentBox = styled(Box)({
   padding: "15px",
   textAlign: "left",
+  objectFit:"cover",
   color: "white",
   zIndex: 2,
   position: "relative",

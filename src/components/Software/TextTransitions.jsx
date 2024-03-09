@@ -1,5 +1,5 @@
 import React from "react";
-import carBackGround from "../../assets/lambo.jpg";
+import carBackGround from "../../assets/3dservices/Frame69.png";
 import { Box, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import "./software.css"

@@ -29,7 +29,7 @@ function ProjectList() {
     },
     learnMore: {
       height: "2rem",
-      width: "11rem",
+      width: "12rem",
       position: "absolute",
       bottom: 20,
       left: 10,
@@ -65,7 +65,7 @@ function ProjectList() {
                 style={projectListStyles.imageStyles}
               />
               <Box sx={projectListStyles.learnMore}>
-                <button class="button">
+                <button className="button">
                   <span>Learn More</span>
                 </button>
               </Box>
@@ -86,7 +86,7 @@ function ProjectList() {
                 style={projectListStyles.imageStyles}
               />
               <Box sx={projectListStyles.learnMore}>
-                <button class="button">
+                <button className="button">
                   <span>Learn More</span>
                 </button>
               </Box>
@@ -107,7 +107,7 @@ function ProjectList() {
                 style={projectListStyles.imageStyles}
               />
               <Box sx={projectListStyles.learnMore}>
-                <button class="button">
+                <button className="button">
                   <span>Learn More</span>
                 </button>
               </Box>
@@ -128,49 +128,7 @@ function ProjectList() {
                 style={projectListStyles.imageStyles}
               />
               <Box sx={projectListStyles.learnMore}>
-                <button class="button">
-                  <span>Learn More</span>
-                </button>
-              </Box>
-            </Card>
-          </Grid>{" "}
-          <Grid item xs={12} md={6} lg={6}>
-            {" "}
-            <Card
-              sx={{
-                ...projectListStyles.gridStyles,
-                ...projectListStyles.cardHover,
-              }}
-            >
-              {" "}
-              <img
-                src={sampleImage} // Replace with the actual image URL or source
-                alt="Your Image Alt Text"
-                style={projectListStyles.imageStyles}
-              />
-              <Box sx={projectListStyles.learnMore}>
-                <button class="button">
-                  <span>Learn More</span>
-                </button>
-              </Box>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            {" "}
-            <Card
-              sx={{
-                ...projectListStyles.gridStyles,
-                ...projectListStyles.cardHover,
-              }}
-            >
-              {" "}
-              <img
-                src={sampleImage} // Replace with the actual image URL or source
-                alt="Your Image Alt Text"
-                style={projectListStyles.imageStyles}
-              />
-              <Box sx={projectListStyles.learnMore}>
-                <button class="button">
+                <button className="button">
                   <span>Learn More</span>
                 </button>
               </Box>
@@ -191,7 +149,7 @@ function ProjectList() {
                 style={projectListStyles.imageStyles}
               />
               <Box sx={projectListStyles.learnMore}>
-                <button class="button">
+                <button className="button">
                   <span>Learn More</span>
                 </button>
               </Box>
@@ -212,7 +170,49 @@ function ProjectList() {
                 style={projectListStyles.imageStyles}
               />
               <Box sx={projectListStyles.learnMore}>
-                <button class="button">
+                <button className="button">
+                  <span>Learn More</span>
+                </button>
+              </Box>
+            </Card>
+          </Grid>{" "}
+          <Grid item xs={12} md={6} lg={6}>
+            {" "}
+            <Card
+              sx={{
+                ...projectListStyles.gridStyles,
+                ...projectListStyles.cardHover,
+              }}
+            >
+              {" "}
+              <img
+                src={sampleImage} // Replace with the actual image URL or source
+                alt="Your Image Alt Text"
+                style={projectListStyles.imageStyles}
+              />
+              <Box sx={projectListStyles.learnMore}>
+                <button className="button">
+                  <span>Learn More</span>
+                </button>
+              </Box>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            {" "}
+            <Card
+              sx={{
+                ...projectListStyles.gridStyles,
+                ...projectListStyles.cardHover,
+              }}
+            >
+              {" "}
+              <img
+                src={sampleImage} // Replace with the actual image URL or source
+                alt="Your Image Alt Text"
+                style={projectListStyles.imageStyles}
+              />
+              <Box sx={projectListStyles.learnMore}>
+                <button className="button">
                   <span>Learn More</span>
                 </button>
               </Box>
@@ -233,7 +233,7 @@ function ProjectList() {
                 style={projectListStyles.imageStyles}
               />
               <Box sx={projectListStyles.learnMore}>
-                <button class="button">
+                <button className="button">
                   <span>Learn More</span>
                 </button>
               </Box>
@@ -253,7 +253,7 @@ function ProjectList() {
                 style={projectListStyles.imageStyles}
               />
               <Box sx={projectListStyles.learnMore}>
-                <button class="button">
+                <button className="button">
                   <span>Learn More</span>
                 </button>
               </Box>

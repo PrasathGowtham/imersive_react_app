@@ -16,6 +16,7 @@ function HomeScreen() {
         />
       </div> */}
       <div className="buttonContainer">
+        
         <div className="buttonHome">
           <span className="buttonContainerSpan"></span>
           <a href="#">GET STARTED</a>
