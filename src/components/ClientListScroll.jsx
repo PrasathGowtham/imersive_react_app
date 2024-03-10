@@ -8,7 +8,7 @@ import Biba from "../assets/clientList/biba-logo 1.svg";
 import Biskit from "../assets/clientList/Biskit_with_Logo 1.svg";
 import Cbazzar from "../assets/clientList/Cbazaar_Logo 1.svg";
 import shankar from "../assets/clientList/SHANKARA 1.svg";
-import diva from "../assets/clientList/diva_logo_ss-removebg-preview 1.svg";
+import diva from "../assets/clientList/diva.svg";
 import gaitode from "../assets/clientList/gaitonde logo 1.svg";
 import Monte from "../assets/clientList/monte carlo new logo 1.svg";
 import New from "../assets/clientList/100086173_101503861582535_3065356942709882880_n 1.svg";
